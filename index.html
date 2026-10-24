@@ -7,7 +7,7 @@
     <meta name="description" content="Agencia boutique de marketing digital, estrategia web y producción audiovisual en Paysandú. Carlos & Celeste Martínez.">
     <meta property="og:title" content="Martínez & Martínez | Marketing Digital">
     <meta property="og:description" content="Estrategias digitales que transforman negocios en Paysandú.">
-    <meta property="og:image" content="https://i.ibb.co/RkLNsY5S/retouch-2026102418354921.png">
+    <meta property="og:image" content="https://i.ibb.co/KcSKhGSr/a09a46fa-7e4a-4f42-9038-38c6b166fc04.jpg">
     
     <!-- Google Fonts & Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
     <style>
         :root {
             --bg-dark: #090a0f;
-            --bg-card: rgba(18, 20, 29, 0.75);
+            --bg-card: rgba(18, 20, 29, 0.85);
             --bg-glass: rgba(255, 255, 255, 0.03);
             --border-glass: rgba(255, 255, 255, 0.08);
             
@@ -57,51 +57,38 @@
         .container {
             max-width: 1240px;
             margin: 0 auto;
-            padding: 0 24px;
+            padding: 0 20px;
         }
 
-        .ambient-glow {
-            position: absolute;
-            border-radius: 50%;
-            filter: blur(120px);
-            pointer-events: none;
-            z-index: 0;
-        }
-
+        /* Navbar */
         nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            background: rgba(9, 10, 15, 0.85);
+            background: rgba(9, 10, 15, 0.9);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid var(--border-glass);
-            transition: all 0.3s ease;
         }
 
         .nav-container {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            height: 85px;
+            height: 75px;
         }
 
         .logo-container img {
-            height: 55px;
+            height: 48px;
             width: auto;
             object-fit: contain;
             filter: drop-shadow(0 2px 8px rgba(0,0,0,0.5));
-            transition: transform 0.3s ease;
-        }
-
-        .logo-container img:hover {
-            transform: scale(1.03);
         }
 
         .nav-links {
             display: flex;
-            gap: 32px;
+            gap: 24px;
             list-style: none;
             align-items: center;
         }
@@ -110,7 +97,7 @@
             color: var(--text-muted);
             text-decoration: none;
             font-weight: 500;
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             transition: color 0.3s ease;
         }
 
@@ -118,37 +105,14 @@
             color: var(--text-main);
         }
 
-        .btn-nav {
-            background: linear-gradient(135deg, var(--purple-neon), #5b1399);
-            color: white !important;
-            padding: 10px 22px;
-            border-radius: 50px;
-            font-weight: 600 !important;
-            box-shadow: 0 4px 20px var(--purple-glow);
-            transition: all 0.3s ease !important;
-        }
-
-        .btn-nav:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 25px rgba(138, 43, 226, 0.6);
-        }
-
+        /* Hero */
         .hero {
-            padding: 180px 0 100px;
+            padding: 140px 0 80px;
             position: relative;
-            min-height: 90vh;
-            display: flex;
-            align-items: center;
+            text-align: center;
         }
 
-        .hero-grid {
-            display: grid;
-            grid-template-columns: 1.2fr 0.8fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .badge-hero {
+        .hero-badge {
             display: inline-flex;
             align-items: center;
             gap: 8px;
@@ -157,17 +121,28 @@
             border: 1px solid rgba(212, 175, 55, 0.3);
             border-radius: 30px;
             color: var(--gold);
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             font-weight: 600;
-            margin-bottom: 24px;
+            margin-bottom: 20px;
+        }
+
+        .hero img.hero-main-img {
+            max-width: 260px;
+            width: 100%;
+            height: auto;
+            margin: 0 auto 20px;
+            display: block;
+            filter: drop-shadow(0 10px 25px rgba(0,0,0,0.6));
         }
 
         .hero h1 {
-            font-size: 3.8rem;
+            font-size: 3rem;
             line-height: 1.1;
             font-weight: 800;
-            margin-bottom: 24px;
-            letter-spacing: -1px;
+            margin-bottom: 20px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .gradient-text {
@@ -178,42 +153,41 @@
 
         .hero p {
             color: var(--text-muted);
-            font-size: 1.2rem;
+            font-size: 1.05rem;
             line-height: 1.6;
-            margin-bottom: 36px;
-            max-width: 580px;
+            margin-bottom: 30px;
+            max-width: 650px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-ctas {
             display: flex;
-            gap: 20px;
+            gap: 15px;
+            justify-content: center;
             flex-wrap: wrap;
         }
 
         .btn-primary {
             background: linear-gradient(135deg, var(--gold), #b8901f);
             color: #000;
-            padding: 16px 36px;
+            padding: 14px 28px;
             border-radius: 50px;
             font-weight: 700;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             gap: 10px;
-            box-shadow: 0 4px 25px var(--gold-glow);
+            box-shadow: 0 4px 20px var(--gold-glow);
             transition: all 0.3s ease;
-        }
-
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(212, 175, 55, 0.5);
+            font-size: 0.95rem;
         }
 
         .btn-secondary {
             background: rgba(255, 255, 255, 0.05);
             border: 1px solid var(--border-glass);
             color: var(--text-main);
-            padding: 16px 32px;
+            padding: 14px 26px;
             border-radius: 50px;
             font-weight: 600;
             text-decoration: none;
@@ -221,48 +195,13 @@
             align-items: center;
             gap: 10px;
             backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            background: rgba(255, 255, 255, 0.1);
-            border-color: rgba(255, 255, 255, 0.2);
-            transform: translateY(-3px);
-        }
-
-        .hero-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border-glass);
-            border-radius: 24px;
-            padding: 32px;
-            position: relative;
-            backdrop-filter: blur(20px);
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
-            text-align: center;
-        }
-
-        .hero-card img {
-            max-width: 80%;
-            height: auto;
-            margin-bottom: 20px;
-            filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
-        }
-
-        .hero-card-tag {
-            background: rgba(138, 43, 226, 0.15);
-            border: 1px solid var(--purple-neon);
-            color: #d8b4fe;
-            padding: 6px 14px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 600;
-            display: inline-block;
-            margin-bottom: 12px;
+            font-size: 0.95rem;
         }
 
         .section-header {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 40px;
+            padding: 0 15px;
         }
 
         .section-header span {
@@ -270,212 +209,188 @@
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
 
         .section-header h2 {
-            font-size: 2.8rem;
+            font-size: 2.3rem;
             font-weight: 800;
         }
     </style>
 </head>
 <body>
 
-    <div class="ambient-glow" style="top: -100px; left: -100px; width: 400px; height: 400px; background: rgba(138, 43, 226, 0.15);"></div>
-    <div class="ambient-glow" style="top: 40%; right: -100px; width: 500px; height: 500px; background: rgba(212, 175, 55, 0.1);"></div>
-
     <nav>
         <div class="container nav-container">
             <a href="#" class="logo-container">
-                <img src="https://i.ibb.co/RkLNsY5S/retouch-2026102418354921.png" alt="Martínez & Martínez Marketing Digital">
+                <img src="https://i.ibb.co/KcSKhGSr/a09a46fa-7e4a-4f42-9038-38c6b166fc04.jpg" alt="M&M Marketing">
             </a>
             <ul class="nav-links">
-                <li><a href="#agencia">La Agencia</a></li>
-                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#agencia" class="d-none d-md-block">La Agencia</a></li>
                 <li><a href="#portafolio">Trabajos</a></li>
-                <li><a href="#cotizador">Cotizador</a></li>
-                <li><a href="https://wa.me/59892684093?text=Hola%20M%26M,%20quiero%20coordinar%20una%20consulta" class="btn-nav" target="_blank"><i class="fab me-1 fa-whatsapp"></i> Contactar</a></li>
+                <li><a href="https://wa.me/59892684093?text=Hola%20M%26M,%20quiero%20coordinar%20una%20consulta" class="btn-primary" style="padding: 8px 16px; font-size: 0.85rem;" target="_blank"><i class="fab fa-whatsapp"></i> Contactar</a></li>
             </ul>
         </div>
     </nav>
 
     <section class="hero">
-        <div class="container hero-grid">
-            <div>
-                <div class="badge-hero">
-                    <i class="fas fa-star"></i> AGENCIA DIGITAL EN PAYSANDÚ
-                </div>
-                <h1>Estrategia, Diseño & <span class="gradient-text">Resultados Reales</span></h1>
-                <p>Unimos la visión de negocios con la creatividad joven para posicionar tu marca en el mercado actual. Hacemos que tu empresa se destaque y venda más.</p>
-                <div class="hero-ctas">
-                    <a href="https://wa.me/59892684093?text=Hola!%20Me%20gustar%C3%ADa%20agendar%20una%20reuni%C3%B3n%20para%20mi%20marca" class="btn-primary" target="_blank">
-                        <i class="fab fa-whatsapp"></i> Agendar Consulta Gratuita
-                    </a>
-                    <a href="#portafolio" class="btn-secondary">
-                        Ver Muestras
-                    </a>
-                </div>
+        <div class="container">
+            <img src="https://i.ibb.co/KcSKhGSr/a09a46fa-7e4a-4f42-9038-38c6b166fc04.jpg" alt="M&M Logo Centrado" class="hero-main-img">
+            <div class="hero-badge">
+                <i class="fas fa-shield-alt"></i> Agencia Digital Liderada por Carlos & Celeste Martínez • Paysandú, Uruguay
             </div>
-            <div>
-                <div class="hero-card">
-                    <span class="hero-card-tag">FUSIÓN M&M</span>
-                    <img src="https://i.ibb.co/RkLNsY5S/retouch-2026102418354921.png" alt="M&M Logo Integrado">
-                    <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 10px;">
-                        "Combinamos solidez técnica y visión de negocios con las últimas tendencias visuales."
-                    </p>
-                </div>
+            <h1>Llevamos tu marca al <span class="gradient-text">siguiente nivel</span> en Paysandú y la región.</h1>
+            <p>Desarrollo web moderno, producción audiovisual in situ, campañas publicitarias de alto rendimiento e identidad visual para conectar con clientes reales.</p>
+            <div class="hero-ctas">
+                <a href="https://wa.me/59892684093?text=Hola!%20Me%20gustar%C3%ADa%20conversar%20por%20WhatsApp" class="btn-primary" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Conversar por WhatsApp (+598 92 684 093)
+                </a>
+                <a href="#portafolio" class="btn-secondary">
+                    Explorar Portafolio <i class="fas fa-arrow-down"></i>
+                </a>
             </div>
         </div>
     </section>
-    <section class="about" id="agencia">
+    <section class="portfolio" id="portafolio" style="padding: 60px 0;">
         <div class="container">
             <div class="section-header">
-                <span>QUIÉNES SOMOS</span>
-                <h2>La combinación perfecta para tu marca</h2>
-            </div>
-            <div class="about-grid">
-                <div class="duo-card carlos">
-                    <span class="duo-role">Estrategia & Negocios</span>
-                    <h3>Carlos Martínez</h3>
-                    <p>Especialista en desarrollo comercial, gestión estratégica y optimización de conversiones. Enfocado en que cada peso invertido en marketing genere un retorno medible para la empresa.</p>
-                </div>
-                <div class="duo-card celeste">
-                    <span class="duo-role">Tendencias & Creatividad</span>
-                    <h3>Celeste Martínez</h3>
-                    <p>Creadora de contenido, estratega visual y experta en comportamiento digital de audiencias jóvenes. Encargada de que la imagen de tu marca conecte emocionalmente en redes sociales.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="services" id="servicios">
-        <div class="container">
-            <div class="section-header">
-                <span>NUESTROS SERVICIOS</span>
-                <h2>Soluciones digitales integrales</h2>
-            </div>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
-                    <h3>Desarrollo Web & Catálogos</h3>
-                    <p>Sitios web modernos, veloces y adaptados para dispositivos móviles con botón directo de compra y contacto por WhatsApp.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-bullhorn"></i></div>
-                    <h3>Gestión de Redes Sociales</h3>
-                    <p>Estrategia de contenidos para Instagram y Facebook, producción audiovisual y diseño gráfico enfocado en engagement.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-chart-line"></i></div>
-                    <h3>Publicidad Digital (Ads)</h3>
-                    <p>Campañas de anuncios optimizadas en Meta (Instagram/Facebook) para atraer clientes potenciales calificados.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon"><i class="fas fa-paint-brush"></i></div>
-                    <h3>Branding e Identidad</h3>
-                    <p>Diseño y rediseño de marcas, logotipos profesionales, manuales de marca y estética visual para negocios local e internet.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="portfolio" id="portafolio">
-        <div class="container">
-            <div class="section-header">
-                <span>PORTAFOLIO</span>
-                <h2>Muestras de nuestros trabajos</h2>
+                <span>CASOS DE ÉXITO & MUESTRAS</span>
+                <h2>Nuestros Trabajos en Paysandú</h2>
+                <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 8px;">Haz clic en cualquier proyecto para abrir la demostración interactiva en vivo y experimentar el diseño como lo ven los clientes.</p>
             </div>
             
-            <div class="portfolio-filters">
-                <button class="filter-btn active" onclick="filterPortfolio('all')">Todos</button>
-                <button class="filter-btn" onclick="filterPortfolio('gastro')">Gastronomía</button>
-                <button class="filter-btn" onclick="filterPortfolio('ecommerce')">e-Commerce</button>
-                <button class="filter-btn" onclick="filterPortfolio('servicios')">Servicios</button>
+            <div class="portfolio-filters" style="display: flex; justify-content: center; gap: 8px; margin-bottom: 30px; flex-wrap: wrap;">
+                <button class="filter-btn active" onclick="filterPortfolio('all')" style="background: var(--purple-neon); color: white; border: none; padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Todos</button>
+                <button class="filter-btn" onclick="filterPortfolio('gastro')" style="background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-glass); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Gastronomía</button>
+                <button class="filter-btn" onclick="filterPortfolio('ecommerce')" style="background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-glass); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">E-commerce / Tiendas</button>
+                <button class="filter-btn" onclick="filterPortfolio('servicios')" style="background: var(--bg-card); color: var(--text-muted); border: 1px solid var(--border-glass); padding: 8px 16px; border-radius: 20px; font-weight: 600; cursor: pointer;">Catálogos & Servicios</button>
             </div>
 
-            <div class="portfolio-grid">
-                <div class="portfolio-card gastro">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80');">
-                        <div class="portfolio-overlay"></div>
+            <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <!-- Proyecto 1 -->
+                <div class="portfolio-card gastro" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold); font-size: 0.75srem; font-weight: 700; text-transform: uppercase;"><i class="fas fa-utensils"></i> Gastronomía & Carnes</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;"><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Paysandú</span>
                     </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-tag">Gastronomía & Carnes</span>
-                        <h3>MUU Steak House</h3>
-                        <p>Catálogo digital interactivo con menú completo, integración a WhatsApp para pedidos y gestión visual de marca en Paysandú.</p>
-                        <button class="btn-demo" onclick="openModal('MUU Steak House', 'Gastronomía', 'Desarrollo de catálogo digital interactivo para carnicería boutique y steakhouse con pedidos directos.', ['Menú web interactivo', 'Optimizador de pedidos WhatsApp', 'Estrategia de marca local'])">
-                            <i class="fas fa-eye"></i> Ver Muestra
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">MUU Steak House</h3>
+                        <p style="color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; font-weight: 600;">Carnicería Premium & Menú Gastronómico</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">Sitio web institucional con catálogo digital de cortes de carne seleccionados, carta de platos y sistema de reserva con pedidos directos a WhatsApp.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Menú Interactivo</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">WhatsApp Directo</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Diseño Mobile-First</span>
+                        </div>
+                        <button onclick="openModal('MUU Steak House', 'Gastronomía & Carnes', 'Sitio web con catálogo interactivo de cortes y platos finos adaptado para pedidos rápidos por WhatsApp en Paysandú.', ['Menú web interactivo', 'Optimizador de pedidos WhatsApp', 'Estrategia de marca local'])" style="margin-top: auto; background: linear-gradient(135deg, var(--gold), #b8901f); color: #000; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-eye"></i> VER DEMOSTRACIÓN EN VIVO
                         </button>
                     </div>
                 </div>
 
-                <div class="portfolio-card servicios">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=600&q=80');">
-                        <div class="portfolio-overlay"></div>
+                <!-- Proyecto 2 -->
+                <div class="portfolio-card servicios" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;"><i class="fas fa-gem"></i> Catálogo & Esoterismo</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;"><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Paysandú</span>
                     </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-tag">Tienda & Santería</span>
-                        <h3>Soliana Santería</h3>
-                        <p>Plataforma web con buscador interactivo de productos, catálogo por categorías y cotización directa por WhatsApp.</p>
-                        <button class="btn-demo" onclick="openModal('Soliana Santería', 'Productos Holísticos', 'Sitio web estilizado místico con catálogo de más de 100 productos y carrito dinámico por WhatsApp.', ['Buscador en tiempo real', 'Filtro por categorías', 'Integración WhatsApp'])">
-                            <i class="fas fa-eye"></i> Ver Muestra
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Soliana Santería</h3>
+                        <p style="color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; font-weight: 600;">Santería Holística & Productos Espirituales</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">Catálogo místico con filtrado dinámico por categorías (velas preparadas, sahumerios, amuletos) y cotizador instantáneo de pedidos a WhatsApp.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Filtro de Productos</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Cotizador de Pedidos</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Branding Místico</span>
+                        </div>
+                        <button onclick="openModal('Soliana Santería', 'Catálogo & Esoterismo', 'Plataforma web con buscador interactivo de productos, catálogo por categorías y cotización directa por WhatsApp.', ['Buscador en tiempo real', 'Filtro por categorías', 'Integración WhatsApp'])" style="margin-top: auto; background: linear-gradient(135deg, var(--gold), #b8901f); color: #000; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-eye"></i> VER DEMOSTRACIÓN EN VIVO
                         </button>
                     </div>
                 </div>
 
-                <div class="portfolio-card ecommerce">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=600&q=80');">
-                        <div class="portfolio-overlay"></div>
+                <!-- Proyecto 3 -->
+                <div class="portfolio-card gastro" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;"><i class="fas fa-hamburger"></i> Comida Mexicana & Delivery</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;"><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Paysandú</span>
                     </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-tag">Accesorios & Joyas</span>
-                        <h3>Vale Joyas</h3>
-                        <p>Showroom digital desplegado con catálogo ágil para exhibir colecciones exclusivas de accesorios y joyas.</p>
-                        <button class="btn-demo" onclick="openModal('Vale Joyas', 'e-Commerce & Joyería', 'Landing page estética y catálogo de alta velocidad alojado en infraestructura ligera.', ['Galería de productos', 'Vista en alta resolución', 'Consultas por producto'])">
-                            <i class="fas fa-eye"></i> Ver Muestra
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Los Takitos</h3>
+                        <p style="color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; font-weight: 600;">Taquería Artesanal & Fast Casual</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">Landing page vibrante para local gastronómico rápido. Selección de combos de tacos, nachos, salsas y cálculo instantáneo de envío en Paysandú.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Menú Dinámico</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Cálculo de Delivery</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Promociones</span>
+                        </div>
+                        <button onclick="openModal('Los Takitos', 'Comida Mexicana & Delivery', 'Landing page optimizada para conversión rápida de pedidos de tacos y comida mexicana por WhatsApp.', ['Menú dinámico', 'Diseño móvil prioritario', 'Acceso directo a promociones'])" style="margin-top: auto; background: linear-gradient(135deg, var(--gold), #b8901f); color: #000; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-eye"></i> VER DEMOSTRACIÓN EN VIVO
                         </button>
                     </div>
                 </div>
 
-                <div class="portfolio-card gastro">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80');">
-                        <div class="portfolio-overlay"></div>
+                <!-- Proyecto 4 -->
+                <div class="portfolio-card ecommerce" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;"><i class="fas fa-ring"></i> Joyería & Accesorios</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;"><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Paysandú</span>
                     </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-tag">Gastronomía Fast Food</span>
-                        <h3>Los Takitos</h3>
-                        <p>Página de aterrizaje optimizada para conversión rápida de pedidos de tacos y comida mexicana por WhatsApp.</p>
-                        <button class="btn-demo" onclick="openModal('Los Takitos', 'Gastronomía Tacos', 'Página web interactiva con promociones del día y checkout directo.', ['Menú dinámico', 'Diseño móvil prioritario', 'Acceso directo a promociones'])">
-                            <i class="fas fa-eye"></i> Ver Muestra
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Vale Joyas</h3>
+                        <p style="color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; font-weight: 600;">Joyería Fina en Plata y Oro</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">Catálogo de estética minimalista para exhibir colecciones de anillos, cadenas y accesorios finos con cotizador de piezas personalizadas.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Galería Fotográfica</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Diseño Premium</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Consulta de Talles</span>
+                        </div>
+                        <button onclick="openModal('Vale Joyas', 'Joyería & Accesorios', 'Showroom digital desplegado con catálogo ágil para exhibir colecciones exclusivas de accesorios y joyas.', ['Galería de productos', 'Vista en alta resolución', 'Consultas por producto'])" style="margin-top: auto; background: linear-gradient(135deg, var(--gold), #b8901f); color: #000; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-eye"></i> VER DEMOSTRACIÓN EN VIVO
                         </button>
                     </div>
                 </div>
 
-                <div class="portfolio-card ecommerce">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=600&q=80');">
-                        <div class="portfolio-overlay"></div>
+                <!-- Proyecto 5 -->
+                <div class="portfolio-card ecommerce" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;"><i class="fas fa-clock"></i> E-commerce / Relojes</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;"><i class="fas fa-globe" style="color: var(--gold);"></i> Uruguay</span>
                     </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-tag">Relojes & Estilo</span>
-                        <h3>Hora Cero</h3>
-                        <p>Tienda digital especializada en relojes con ficha detallada por modelo y sistema de consultas inmediatas.</p>
-                        <button class="btn-demo" onclick="openModal('Hora Cero', 'Relojería Online', 'Sitio catálogo especializado en marcas de relojes con filtrado por especificaciones.', ['Catálogo técnico', 'Galería de imágenes', 'Botón de reserva'])">
-                            <i class="fas fa-eye"></i> Ver Muestra
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">Hora Cero</h3>
+                        <p style="color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; font-weight: 600;">Relojería Exclusiva & Smartwatches</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">Tienda virtual responsiva de alta velocidad con ficha técnica detallada por modelo de reloj, carrito exprés y pasarela de atención directa.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Filtro por Marca</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Check-out Rápido</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">SEO Optimizado</span>
+                        </div>
+                        <button onclick="openModal('Hora Cero', 'E-commerce / Relojes', 'Tienda virtual especializada en relojes con ficha detallada por modelo y sistema de consultas inmediatas.', ['Catálogo técnico', 'Galería de imágenes', 'Botón de reserva'])" style="margin-top: auto; background: linear-gradient(135deg, var(--gold), #b8901f); color: #000; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-eye"></i> VER DEMOSTRACIÓN EN VIVO
                         </button>
                     </div>
                 </div>
 
-                <div class="portfolio-card gastro">
-                    <div class="portfolio-img" style="background-image: url('https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80');">
-                        <div class="portfolio-overlay"></div>
+                <!-- Proyecto 6 -->
+                <div class="portfolio-card gastro" style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 18px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 20px; border-bottom: 1px solid var(--border-glass); display: flex; justify-content: space-between; align-items: center;">
+                        <span style="color: var(--gold); font-size: 0.75rem; font-weight: 700; text-transform: uppercase;"><i class="fas fa-concierge-bell"></i> Gastronomía & Congelados</span>
+                        <span style="color: var(--text-muted); font-size: 0.8rem;"><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Paysandú</span>
                     </div>
-                    <div class="portfolio-content">
-                        <span class="portfolio-tag">Comidas Tradicionales</span>
-                        <h3>La Fábrica de las Milanesas</h3>
-                        <p>Plataforma para pedidos exprés de milanesas y empanadas artesanales con cálculo de envíos a domicilio.</p>
-                        <button class="btn-demo" onclick="openModal('La Fábrica de las Milanesas', 'Gastronomía Delivery', 'Sistema de pedidos con selección de variantes y combinaciones personalizadas.', ['Customizador de combos', 'Cálculo de delivery', 'Atención directa'])">
-                            <i class="fas fa-eye"></i> Ver Muestra
+                    <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+                        <h3 style="font-size: 1.4rem; margin-bottom: 8px;">La Fábrica de Las Milanesas</h3>
+                        <p style="color: var(--gold); font-size: 0.85rem; margin-bottom: 12px; font-weight: 600;">Especialistas en Milanesas Gourmet</p>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;">Catálogo interactivo de variedades de milanesas, empanadas (carne, pollo, vegetarianas) con armado de combos familiares y envíos programados.</p>
+                        <div style="display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 20px;">
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Armador de Combos</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Pedidos WhatsApp</span>
+                            <span style="background: rgba(255,255,255,0.05); padding: 4px 10px; border-radius: 6px; font-size: 0.75rem; color: var(--text-muted);">Promociones</span>
+                        </div>
+                        <button onclick="openModal('La Fábrica de Las Milanesas', 'Gastronomía & Congelados', 'Plataforma para pedidos exprés de milanesas y empanadas artesanales con cálculo de envíos a domicilio.', ['Customizador de combos', 'Cálculo de delivery', 'Atención directa'])" style="margin-top: auto; background: linear-gradient(135deg, var(--gold), #b8901f); color: #000; border: none; padding: 12px; border-radius: 12px; font-weight: 700; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                            <i class="fas fa-eye"></i> VER DEMOSTRACIÓN EN VIVO
                         </button>
                     </div>
                 </div>
@@ -483,103 +398,135 @@
         </div>
     </section>
 
-    <section class="calculator" id="cotizador">
+    <!-- About Agency -->
+    <section class="about" id="agencia" style="padding: 60px 0;">
         <div class="container">
             <div class="section-header">
-                <span>HERRAMIENTA INTERACTIVA</span>
-                <h2>Calcula un presupuesto estimado</h2>
+                <span><i class="fas fa-users"></i> NUESTRA ESENCIA FAMILIAR & PROFESIONAL</span>
+                <h2>La fusión entre estrategia comercial y creatividad audiovisual.</h2>
+                <p style="color: var(--text-muted); max-width: 700px; margin: 10px auto 0; font-size: 1rem; line-height: 1.6;">En <strong>Martínez & Martínez Marketing Digital</strong> unimos la visión analítica y de negocios de <strong>Carlos Martínez</strong> con el talento para la producción en video, diseño de tendencias y gestión de redes de su hija <strong>Celeste Martínez</strong>.</p>
             </div>
-            <div class="calc-box">
-                <p style="text-align: center; color: var(--text-muted); margin-bottom: 30px;">Selecciona los servicios que necesita tu negocio en Paysandú:</p>
-                
-                <div class="calc-options">
-                    <div class="calc-item" onclick="toggleCalc(this, 350)">
-                        <div class="calc-checkbox"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>Página Web / Catálogo</strong>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">Sitio interactivo adaptado a móvil</p>
-                        </div>
-                    </div>
-                    <div class="calc-item" onclick="toggleCalc(this, 250)">
-                        <div class="calc-checkbox"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>Gestión Redes (Mensual)</strong>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">Contenido + Posts + Reels</p>
-                        </div>
-                    </div>
-                    <div class="calc-item" onclick="toggleCalc(this, 200)">
-                        <div class="calc-checkbox"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>Campañas Meta Ads</strong>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">Configuración y optimización de anuncios</p>
-                        </div>
-                    </div>
-                    <div class="calc-item" onclick="toggleCalc(this, 180)">
-                        <div class="calc-checkbox"><i class="fas fa-check"></i></div>
-                        <div>
-                            <strong>Diseño de Identidad / Logo</strong>
-                            <p style="font-size: 0.8rem; color: var(--text-muted);">Logotipo vectorial + Branding</p>
-                        </div>
-                    </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-top: 40px;">
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 20px; padding: 30px; border-top: 4px solid var(--gold);">
+                    <span style="color: var(--gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase;">Estrategia & Dirección</span>
+                    <h3 style="font-size: 1.5rem; margin: 8px 0 12p
+                        <!-- Services -->
+    <section class="services" id="servicios" style="padding: 60px 0;">
+        <div class="container">
+            <div class="section-header">
+                <span>SOLUCIONES INTEGRALES</span>
+                <h2>Servicios de Alto Valor</h2>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;">
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 20px; padding: 30px;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); display: flex; align-items: center; justify-content: center; color: var(--purple-neon); font-size: 1.2rem; margin-bottom: 20px;"><i class="fas fa-laptop-code"></i></div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Diseño Web & Catálogos</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">Sitios corporativos, menús interactivos y tiendas virtuales responsivas preparadas para vender por WhatsApp.</p>
+                    <a href="https://wa.me/59892684093?text=Hola%20M%26M,%20me%20interesa%20Diseño%20Web" style="color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.9rem;" target="_blank">Solicitar Web &rarr;</a>
                 </div>
 
-                <div class="calc-summary">
-                    <div class="calc-price">
-                        <span>Estimado aproximado:</span>
-                        <strong id="calc-total">USD $0</strong>
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 20px; padding: 30px;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); display: flex; align-items: center; justify-content: center; color: var(--purple-neon); font-size: 1.2rem; margin-bottom: 20px;"><i class="fas fa-video"></i></div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Producción Audiovisual</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">Grabación presencial en tu local en Paysandú. Edición de Reels/TikToks de alto enganche visual.</p>
+                    <a href="https://wa.me/59892684093?text=Hola%20M%26M,%20me%20interesa%20Producción%20Audiovisual" style="color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.9rem;" target="_blank">Coordinar Rodaje &rarr;</a>
+                </div>
+
+                <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 20px; padding: 30px;">
+                    <div style="width: 50px; height: 50px; border-radius: 12px; background: rgba(138,43,226,0.1); border: 1px solid rgba(138,43,226,0.3); display: flex; align-items: center; justify-content: center; color: var(--purple-neon); font-size: 1.2rem; margin-bottom: 20px;"><i class="fas fa-bullseye"></i></div>
+                    <h3 style="font-size: 1.3rem; margin-bottom: 10px;">Gestión de Ads & Redes</h3>
+                    <p style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 20px;">Estrategia mensual, grilla de contenidos y pauta publicitaria en Meta Ads orientada a Paysandú y la región.</p>
+                    <a href="https://wa.me/59892684093?text=Hola%20M%26M,%20me%20interesa%20Gestión%20de%20Redes" style="color: var(--gold); text-decoration: none; font-weight: 600; font-size: 0.9rem;" target="_blank">Ver Planes de Redes &rarr;</a>
+                </div>
+            </div>
+        </div>
+    </section>
+ <!-- Calculator UYU -->
+    <section class="calculator" id="cotizador" style="padding: 60px 0; background: radial-gradient(circle at center, rgba(138,43,226,0.06) 0%, transparent 70%);">
+        <div class="container">
+            <div class="section-header">
+                <span>PRESUPUESTO EN TIEMPO REAL</span>
+                <h2>Cotizador de Servicios</h2>
+                <p style="color: var(--text-muted); font-size: 0.9rem;">Arma tu paquete a medida y envíalo directamente al WhatsApp de Carlos & Celeste (+598 92 684 093).</p>
+            </div>
+            
+            <div style="background: var(--bg-card); border: 1px solid var(--border-glass); border-radius: 24px; padding: 30px; max-width: 800px; margin: 0 auto;">
+                <div style="display: flex; flex-direction: column; gap: 14px; margin-bottom: 24px;">
+                    <label class="calc-item" onclick="toggleCalc(this, 12000)" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 14px; padding: 16px; cursor: pointer; display: flex; align-items: center; gap: 14px;">
+                        <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--purple-neon);">
+                        <div>
+                            <strong>Gestión de Redes</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Planificación + Grilla mensual</p>
+                        </div>
+                    </label>
+
+                    <label class="calc-item" onclick="toggleCalc(this, 9500)" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 14px; padding: 16px; cursor: pointer; display: flex; align-items: center; gap: 14px;">
+                        <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--purple-neon);">
+                        <div>
+                            <strong>Producción Audiovisual</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Rodaje in situ + Edición</p>
+                        </div>
+                    </label>
+
+                    <label class="calc-item" onclick="toggleCalc(this, 15000)" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 14px; padding: 16px; cursor: pointer; display: flex; align-items: center; gap: 14px;">
+                        <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--purple-neon);">
+                        <div>
+                            <strong>Página Web / Catálogo</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Sitio responsivo con WhatsApp</p>
+                        </div>
+                    </label>
+
+                    <label class="calc-item" onclick="toggleCalc(this, 8000)" style="background: rgba(255,255,255,0.02); border: 1px solid var(--border-glass); border-radius: 14px; padding: 16px; cursor: pointer; display: flex; align-items: center; gap: 14px;">
+                        <input type="checkbox" style="width: 20px; height: 20px; accent-color: var(--purple-neon);">
+                        <div>
+                            <strong>Campañas de Publicidad</strong>
+                            <p style="font-size: 0.8rem; color: var(--text-muted);">Segmentación en Paysandú</p>
+                        </div>
+                    </label>
+                </div>
+
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 24px;">
+                    <input type="text" id="clientName" placeholder="Tu Nombre / Empresa" style="background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); padding: 14px; border-radius: 12px; color: white; outline: none;">
+                    <input type="text" id="clientActivity" placeholder="Rubro de Actividad" style="background: rgba(255,255,255,0.04); border: 1px solid var(--border-glass); padding: 14px; border-radius: 12px; color: white; outline: none;">
+                </div>
+
+                <div style="border-top: 1px solid var(--border-glass); padding-top: 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px;">
+                    <div>
+                        <span style="color: var(--text-muted); font-size: 0.85rem; display: block;">Presupuesto Estimado:</span>
+                        <strong id="calc-total" style="font-size: 2rem; color: var(--gold);">0 UYU</strong>
                     </div>
-                    <button class="btn-primary" onclick="sendQuotation()">
-                        <i class="fab fa-whatsapp"></i> Enviar Cotización por WhatsApp
+                    <button class="btn-primary" onclick="sendQuotationUYU()">
+                        <i class="fab fa-whatsapp"></i> Enviar Cotización (+598 92 684 093)
                     </button>
                 </div>
             </div>
         </div>
     </section>
-    <a href="https://wa.me/59892684093?text=Hola%20M%26M,%20me%20gustar%C3%ADa%20hacer%20una%20consulta" class="whatsapp-float" target="_blank" aria-label="Contacto por WhatsApp">
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/59892684093?text=Hola%20M%26M,%20necesito%20información" style="position: fixed; bottom: 25px; right: 25px; width: 60px; height: 60px; background-color: var(--whatsapp-green); color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 30px; box-shadow: 0 8px 20px rgba(37,211,102,0.4); z-index: 9999; text-decoration: none;" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <footer>
+    <!-- Footer -->
+    <footer style="border-top: 1px solid var(--border-glass); padding: 40px 0 20px; background: rgba(5,6,9,0.95); text-align: center;">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <img src="https://i.ibb.co/RkLNsY5S/retouch-2026102418354921.png" alt="M&M Logo Footer">
-                    <p>Agencia boutique de marketing digital y desarrollo web en Paysandú, Uruguay. Potenciando marcas locales con estrategia y creatividad.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Navegación</h4>
-                    <ul>
-                        <li><a href="#agencia">La Agencia</a></li>
-                        <li><a href="#servicios">Servicios</a></li>
-                        <li><a href="#portafolio">Muestras</a></li>
-                        <li><a href="#cotizador">Cotizador</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contacto</h4>
-                    <ul>
-                        <li><i class="fas fa-map-marker-alt" style="color: var(--gold);"></i> Paysandú, Uruguay</li>
-                        <li><i class="fab fa-whatsapp" style="color: var(--whatsapp-green);"></i> +598 92 684 093</li>
-                        <li><i class="fas fa-envelope" style="color: var(--purple-neon);"></i> contacto@mymmarketing.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Martínez & Martínez Marketing Digital (M&M). Todos los derechos reservados.</p>
-            </div>
+            <img src="https://i.ibb.co/KcSKhGSr/a09a46fa-7e4a-4f42-9038-38c6b166fc04.jpg" alt="Logo Footer" style="height: 40px; margin-bottom: 15px;">
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 10px;">&copy; 2026 Martínez & Martínez Marketing Digital. Paysandú, Uruguay.</p>
         </div>
     </footer>
 
-    <div class="modal-overlay" id="portfolioModal">
-        <div class="modal-content">
-            <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
-            <span id="modalCategory" style="color: var(--gold); font-weight: 700; text-transform: uppercase; font-size: 0.85rem;"></span>
-            <h2 id="modalTitle" style="font-size: 2rem; margin: 10px 0;"></h2>
-            <p id="modalDesc" style="color: var(--text-muted); line-height: 1.6; margin-bottom: 24px;"></p>
-            
-            <h4 style="margin-bottom: 12px; color: var(--text-main);">Características del Proyecto:</h4>
-            <ul id="modalFeatures" style="list-style: none; margin-bottom: 30px;"></ul>
-
+    <!-- Modal -->
+    <div id="portfolioModal" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); backdrop-filter: blur(8px); z-index: 10000; display: none; align-items: center; justify-content: center; padding: 15px;">
+        <div style="background: var(--bg-dark); border: 1px solid var(--border-glass); border-radius: 20px; max-width: 650px; width: 100%; padding: 30px; position: relative;">
+            <button onclick="closeModal()" style="position: absolute; top: 15px; right: 15px; background: rgba(255,255,255,0.1); border: none; color: white; width: 32px; height: 32px; border-radius: 50%; cursor: pointer;"><i class="fas fa-times"></i></button>
+            <span id="modalCategory" style="color: var(--gold); font-weight: 700; text-transform: uppercase; font-size: 0.8rem;"></span>
+            <h2 id="modalTitle" style="font-size: 1.8rem; margin: 8px 0;"></h2>
+            <p id="modalDesc" style="color: var(--text-muted); font-size: 0.9rem; line-height: 1.5; margin-bottom: 20px;"></p>
+            <h4 style="font-size: 0.95rem; margin-bottom: 10px;">Características del Proyecto:</h4>
+            <ul id="modalFeatures" style="list-style: none; margin-bottom: 24px;"></ul>
             <div style="text-align: right;">
                 <a id="modalWspBtn" href="#" class="btn-primary" target="_blank">
                     <i class="fab fa-whatsapp"></i> Solicitar Proyecto Similar
@@ -589,40 +536,48 @@
     </div>
 
     <script>
-        let selectedTotal = 0;
-        let selectedServices = [];
+        let selectedTotalUYU = 0;
+        let selectedServicesUYU = [];
 
         function toggleCalc(element, price) {
-            element.classList.toggle('selected');
+            const checkbox = element.querySelector('input[type="checkbox"]');
+            checkbox.checked = !checkbox.checked;
+            element.style.borderColor = checkbox.checked ? 'var(--purple-neon)' : 'var(--border-glass)';
+            element.style.background = checkbox.checked ? 'rgba(138,43,226,0.1)' : 'rgba(255,255,255,0.02)';
+            
             const serviceName = element.querySelector('strong').innerText;
 
-            if(element.classList.contains('selected')) {
-                selectedTotal += price;
-                selectedServices.push(serviceName);
+            if(checkbox.checked) {
+                selectedTotalUYU += price;
+                selectedServicesUYU.push(serviceName);
             } else {
-                selectedTotal -= price;
-                selectedServices = selectedServices.filter(s => s !== serviceName);
+                selectedTotalUYU -= price;
+                selectedServicesUYU = selectedServicesUYU.filter(s => s !== serviceName);
             }
 
-            document.getElementById('calc-total').innerText = 'USD $' + selectedTotal;
+            document.getElementById('calc-total').innerText = selectedTotalUYU.toLocaleString() + ' UYU';
         }
 
-        function sendQuotation() {
-            if(selectedServices.length === 0) {
-                alert('Por favor selecciona al menos un servicio en el cotizador.');
+        function sendQuotationUYU() {
+            if(selectedServicesUYU.length === 0) {
+                alert('Selecciona al menos un servicio en el cotizador.');
                 return;
             }
-            const msg = `Hola M%26M Marketing! Estuve en el cotizador de su web y me interesan los siguientes servicios: ${selectedServices.join(', ')}. Estimado: USD $${selectedTotal}. Me gustaría coordinar una reunión.`;
-            window.open(`https://wa.me/59892684093?text=${msg}`, '_blank');
+            const name = document.getElementById('clientName').value || 'Cliente';
+            const activity = document.getElementById('clientActivity').value || 'No especificado';
+            const msg = `Hola M&M! Soy ${name} (${activity}). Me interesan los servicios: ${selectedServicesUYU.join(', ')}. Presupuesto estimado: ${selectedTotalUYU.toLocaleString()} UYU.`;
+            window.open(`https://wa.me/59892684093?text=${encodeURIComponent(msg)}`, '_blank');
         }
 
         function filterPortfolio(category) {
-            const buttons = document.querySelectorAll('.filter-btn');
-            buttons.forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
+            document.querySelectorAll('.filter-btn').forEach(b => {
+                b.style.background = 'var(--bg-card)';
+                b.style.color = 'var(--text-muted)';
+            });
+            event.target.style.background = 'var(--purple-neon)';
+            event.target.style.color = 'white';
 
-            const cards = document.querySelectorAll('.portfolio-card');
-            cards.forEach(card => {
+            document.querySelectorAll('.portfolio-card').forEach(card => {
                 if(category === 'all' || card.classList.contains(category)) {
                     card.style.display = 'flex';
                 } else {
@@ -639,18 +594,18 @@
             const featureList = document.getElementById('modalFeatures');
             featureList.innerHTML = '';
             features.forEach(f => {
-                featureList.innerHTML += `<li style="margin-bottom: 8px; color: var(--text-muted);"><i class="fas fa-check-circle" style="color: var(--purple-neon); margin-right: 8px;"></i>${f}</li>`;
+                featureList.innerHTML += `<li style="margin-bottom: 6px; color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-check-circle" style="color: var(--purple-neon); margin-right: 6px;"></i>${f}</li>`;
             });
 
-            const msg = `Hola M%26M Marketing! Estuve viendo la muestra de "${title}" en su web y me gustaría cotizar algo similar para mi negocio.`;
-            document.getElementById('modalWspBtn').href = `https://wa.me/59892684093?text=${msg}`;
+            const msg = `Hola M&M! Estuve viendo la muestra de "${title}" en su web y me gustaría cotizar un proyecto similar.`;
+            document.getElementById('modalWspBtn').href = `https://wa.me/59892684093?text=${encodeURIComponent(msg)}`;
 
-            document.getElementById('portfolioModal').classList.add('active');
+            document.getElementById('portfolioModal').style.display = 'flex';
         }
 
         function closeModal() {
-            document.getElementById('portfolioModal').classList.remove('active');
+            document.getElementById('portfolioModal').style.display = 'none';
         }
     </script>
 </body>
-</html>
+                    </html>
